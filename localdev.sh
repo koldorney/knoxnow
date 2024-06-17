@@ -1,0 +1,2 @@
+docker run --network knoxnow -d --rm --pull always -p 8000:8000 --name db  -v ./db/mydata:/mydata surrealdb/surrealdb:latest start --log trace --auth --user root --pass root file:/mydata/mydatabase.db
+docker run --network knoxnow -d -p 80:3000 --name editor -e DB_NAME=db -e DB_PORT=8000 editor
