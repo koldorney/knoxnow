@@ -18,8 +18,9 @@
 		animation = anime({
 			targets: characters,
 			translateY: -10,
+			color: scrolledColor,
 			delay: (el, i) => i * 100,
-			duration: 500,
+			duration: 30,
 			elasticity: 20,
 			easing: 'easeInOutSine',
 			autoplay: false,
@@ -33,7 +34,7 @@
 	function handleWheel(event) {
 		event.preventDefault();
 		const delta = Math.sign(event.deltaY);
-		progress = Math.min(100, Math.max(0, progress + delta * .05));
+		progress = Math.min(100, Math.max(0, progress + delta * .2));
 		animation.seek(animation.duration * (progress / 100));
 	}
 
@@ -64,7 +65,7 @@
 
 <div class="container">
 	<div class="text-container" bind:this={textContainer}>
-		{#each Array.from(text.replace(/\s+/g, '')) as char, index}
+		{#each text.split(' ') as char, index}
    <span
 		 class="zoom-char"
 		 style="font-size: {size}; font-family: {font};"
