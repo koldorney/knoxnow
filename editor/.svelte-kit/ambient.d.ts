@@ -48,7 +48,6 @@ declare module '$env/static/private' {
 	export const TERMINAL_EMULATOR: string;
 	export const npm_package_json: string;
 	export const _: string;
-	export const IJ_RESTARTER_LOG: string;
 	export const npm_config_userconfig: string;
 	export const npm_config_init_module: string;
 	export const __CFBundleIdentifier: string;
@@ -129,7 +128,6 @@ declare module '$env/dynamic/private' {
 		TERMINAL_EMULATOR: string;
 		npm_package_json: string;
 		_: string;
-		IJ_RESTARTER_LOG: string;
 		npm_config_userconfig: string;
 		npm_config_init_module: string;
 		__CFBundleIdentifier: string;
